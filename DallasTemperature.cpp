@@ -904,22 +904,22 @@ void DallasTemperature::setLowAlarmTemp(const uint8_t* deviceAddress,
 
 // returns a int8_t with the current high alarm temperature or
 // DEVICE_DISCONNECTED for an address
-int8_t DallasTemperature::getHighAlarmTemp(const uint8_t* deviceAddress) {
+int16_t DallasTemperature::getHighAlarmTemp(const uint8_t* deviceAddress) {
 
 	ScratchPad scratchPad;
 	if (isConnected(deviceAddress, scratchPad))
-		return (int8_t) scratchPad[HIGH_ALARM_TEMP];
+		return (int16_t) scratchPad[HIGH_ALARM_TEMP];
 	return DEVICE_DISCONNECTED_C;
 
 }
 
 // returns a int8_t with the current low alarm temperature or
 // DEVICE_DISCONNECTED for an address
-int8_t DallasTemperature::getLowAlarmTemp(const uint8_t* deviceAddress) {
+int16_t DallasTemperature::getLowAlarmTemp(const uint8_t* deviceAddress) {
 
 	ScratchPad scratchPad;
 	if (isConnected(deviceAddress, scratchPad))
-		return (int8_t) scratchPad[LOW_ALARM_TEMP];
+		return (int16_t) scratchPad[LOW_ALARM_TEMP];
 	return DEVICE_DISCONNECTED_C;
 
 }

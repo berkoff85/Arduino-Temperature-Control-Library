@@ -209,11 +209,11 @@ public:
 
 	// returns a int8_t with the current high alarm temperature for a device
 	// in the range -55C - 125C
-	int8_t getHighAlarmTemp(const uint8_t*);
+	int16_t getHighAlarmTemp(const uint8_t*);
 
 	// returns a int8_t with the current low alarm temperature for a device
 	// in the range -55C - 125C
-	int8_t getLowAlarmTemp(const uint8_t*);
+	int16_t getLowAlarmTemp(const uint8_t*);
 
 	// resets internal variables used for the alarm search
 	void resetAlarmSearch(void);
